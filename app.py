@@ -38,7 +38,7 @@ def analyze_resume_with_ai(resume_text, job_desc):
     """
 
     data = {
-        "model": "deepseek/deepseek-chat:free",
+        "model": "deepseek/deepseek-r1-0528:free",
         "messages": [
             {"role": "system", "content": "You are an expert HR resume evaluator."},
             {"role": "user", "content": prompt}
