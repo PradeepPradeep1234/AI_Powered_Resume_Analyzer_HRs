@@ -4,6 +4,8 @@ import requests
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 load_dotenv()
+os.makedirs('resume_uploads', exist_ok=True)  # ✅ Ensure the folder exists
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'resume_uploads'
 API_KEY = os.getenv("DEEPSEEK_API_KEY")  # Replace with your OpenRouter key
