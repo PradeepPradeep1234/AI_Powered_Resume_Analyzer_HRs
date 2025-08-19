@@ -39,12 +39,13 @@ def analyze_resume_with_ai(resume_text, job_desc):
     """
 
     data = {
-        "model": "deepseek-chat",
-        "messages": [
-            {"role": "system", "content": "You are an expert HR resume evaluator."},
-            {"role": "user", "content": prompt}
-        ]
-    }
+    "model": "gpt-4o-mini",
+    "messages": [
+        {"role": "system", "content": "You are an expert HR resume evaluator."},
+        {"role": "user", "content": prompt}
+    ]
+}
+
 
     res = requests.post(url, headers=headers, json=data)
     if res.status_code == 200:
